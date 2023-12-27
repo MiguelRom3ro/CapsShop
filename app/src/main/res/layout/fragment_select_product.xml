@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.selectproduct.SelectProductFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_padding_middle"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_product"
+                style="@style/title_2" />
+
+
+            <ImageView
+                android:id="@+id/iv_product_sp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:background="@android:color/holo_blue_light"
+                android:layout_marginTop="@dimen/common_padding_min" />
+
+            <TextView
+                android:id="@+id/tv_price_before_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:textColor="@color/gray"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:text="@string/example_price_before"/>
+
+            <TextView
+                android:id="@+id/tv_price_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/example_price"
+                android:textSize="@dimen/text_title4" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_middle">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </View>
+
+                <TextView
+                    android:id="@+id/tv_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cantidad"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/common_padding_middle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/common_padding_min"
+                    app:layout_constraintStart_toEndOf="@id/tv_cantidad"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/iv_substract_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_substract"
+                    android:layout_marginEnd="@dimen/common_padding_min"
+                    android:padding="@dimen/common_padding_min"
+                    android:importantForAccessibility="no"
+                    android:background="@color/gray_light"
+                    app:layout_constraintEnd_toStartOf="@id/iv_plus_sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/iv_plus_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginEnd="@dimen/common_padding_middle"
+                    android:padding="@dimen/common_padding_min"
+                    android:background="@color/gray_light"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_car_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_middle"
+                android:backgroundTint="@color/black"
+                android:text="@string/add_shopping_car"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_middle"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_title4"/>
+
+            <TextView
+                android:id="@+id/tv_description_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_min"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text1"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

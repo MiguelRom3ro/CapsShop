@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/common_padding_min"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.sales.SalesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_rebajas"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_sale"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_sales"
+            android:layout_marginStart="@dimen/common_padding_middle"
+            app:layout_constraintTop_toTopOf="@id/view_rebajas"
+            app:layout_constraintStart_toStartOf="@id/view_rebajas"
+            app:layout_constraintBottom_toBottomOf="@id/view_rebajas"
+            />
+
+        <TextView
+            android:id="@+id/tv_rebajas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rebajas"
+            android:textSize="@dimen/text_title2"
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/common_padding_middle"
+            app:layout_constraintTop_toTopOf="@id/iv_sale"
+            app:layout_constraintStart_toEndOf="@id/iv_sale"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/descubre_precios"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_tittle5"
+            app:layout_constraintStart_toStartOf="@id/tv_rebajas"
+            app:layout_constraintTop_toBottomOf="@id/tv_rebajas"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        />
+
+</LinearLayout>

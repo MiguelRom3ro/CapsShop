@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        android:text="@string/login"
+        android:textSize="@dimen/text_tittle1"
+        android:layout_gravity="center"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/btn_google"
+        android:drawableLeft="@drawable/ic_google"
+        android:layout_marginTop="@dimen/common_padding_large"
+        android:text="@string/login_with_google" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/btn_google"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:text="@string/login_with_facebook" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/inputext_user"
+        android:layout_gravity="center"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_input_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/inputpassword_user"
+        android:layout_gravity="center"
+        android:hint="@string/password"
+        android:layout_marginTop="@dimen/common_padding_middle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_input_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/btn_dark"
+        android:layout_marginTop="@dimen/common_padding_middle"
+        android:layout_gravity="center"
+        android:text="@string/log_in" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_min"
+        android:text="@string/forgot_password"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_padding_min"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/sign_up"
+        android:padding="@dimen/common_padding_min"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
