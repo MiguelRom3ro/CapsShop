@@ -92,7 +92,7 @@ class SignUpFragment : Fragment() {
                         Toast.makeText(context, "Registrado con exito", Toast.LENGTH_SHORT).show()
                         navigateLogIn()
                     }else{
-                        Toast.makeText(context, "Formato invalido", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Formato de contraseña invalido", Toast.LENGTH_SHORT).show()
                     }
                 }else{
                     Toast.makeText(context, "Contraseñas distintas", Toast.LENGTH_SHORT).show()
@@ -119,7 +119,7 @@ class SignUpFragment : Fragment() {
         // Utilizar expresiones regulares para verificar si la contraseña contiene al menos una mayúscula, un número y un carácter especial
         val upperCaseRegex = ".*[A-Z].*"
         val digitRegex = ".*\\d.*"
-        val specialCharRegex = ".*[!@#\$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*"
+        val specialCharRegex = ".*[!@#\$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>?].*"
 
         return password.matches(upperCaseRegex.toRegex()) &&
                 password.matches(digitRegex.toRegex()) &&
@@ -139,8 +139,11 @@ class SignUpFragment : Fragment() {
         val email = binding.tiSignupEmail.text.toString()
         val password = binding.tiSignupPassword.text.toString()
 
-        return isEmailValid(email) && isPasswordStrong(password)
+        return isEmailValid(email) && isPasswordStrong(password) && validatePasswordlenght(password)
     }
+
+    private fun validatePasswordlenght(password : String) : Boolean = password.length >= 8
+
 
     //Navega a la interfaz Login
     private fun navigateLogIn(){

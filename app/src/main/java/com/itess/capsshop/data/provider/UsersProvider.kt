@@ -4,7 +4,7 @@ import com.itess.capsshop.data.User
 
 class UsersProvider {
     companion object{
-        private val userList = mutableListOf<User>(
+        private val userList = mutableListOf(
             User(
                 0,
                 "user",

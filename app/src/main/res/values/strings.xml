@@ -67,7 +67,7 @@
     <string name="calle_numero">Calle y numero</string>
     <string name="example_street">Ej.: Calle Numero</string>
     <string name="colonia">Colonia</string>
-    <string name="example_colonia">Ej.: Colonia ...</string>
+    <string name="example_colonia">Ej.: Colonia …</string>
     <string name="number">Telefono</string>
     <string name="pay">Pago</string>
     <string name="checkout_completed_succesfull">¡Compra realizada con exito!</string>
@@ -78,6 +78,6 @@
     <string name="example_products">Productos</string>
     <string name="go_home">Ir a inicio</string>
     <string name="capsshop">Caps Shop´s</string>
-    <string name="validation_password">Contenga mayusculas, minusculas, numeros y minimo un caracter</string>
+    <string name="validation_password">Que tenga 8 o mas caracteres, con una combinacion que contenga minimo una letra mayuscula y una minuscula, un numero y un caracter especial </string>
     <string name="example_price_before">$99.00</string>
 </resources>

@@ -5,7 +5,6 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.itess.capsshop.data.Product
-import com.itess.capsshop.data.ShoppingCar
 import com.itess.capsshop.data.provider.ShoppingCarProvider
 import com.itess.capsshop.databinding.ViewVerticalProductBinding
 import com.itess.capsshop.ui.onClickListener
