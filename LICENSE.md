@@ -1,4 +1,4 @@
-Copyright (c) 2011-2023 GitHub Inc.
+Copyright (c) 2024 MiguelRom3ro.
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
