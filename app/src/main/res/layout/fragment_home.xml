@@ -1,22 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_carousell"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@id/search_view"/>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/rv_carousell"/>
+
+        <ImageButton
+            android:id="@+id/btn_nba"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nba"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_nba"
+            app:layout_constraintStart_toStartOf="@id/btn_nba"
+            app:layout_constraintEnd_toEndOf="@id/btn_nba"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_nfl"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/common_min_padding"
+            app:layout_constraintTop_toTopOf="@id/btn_nba"
+            app:layout_constraintStart_toEndOf="@id/btn_nba"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nfl"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_nfl"
+            app:layout_constraintStart_toStartOf="@id/btn_nfl"
+            app:layout_constraintEnd_toEndOf="@id/btn_nfl"
+            />
+
+        <ImageButton
+            android:id="@+id/btn_mbl"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="@dimen/common_min_padding"
+            app:layout_constraintTop_toTopOf="@id/btn_nba"
+            app:layout_constraintStart_toEndOf="@id/btn_nfl"/>
+
+        <TextView
+            android:id="@+id/tv_btn_mbl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mbl"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/btn_mbl"
+            app:layout_constraintStart_toStartOf="@id/btn_mbl"
+            app:layout_constraintEnd_toEndOf="@id/btn_mbl"
+            />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/tv_btn_mbl"/>
+
+        <TextView
+            android:id="@+id/tv_title_nba"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nba"
+            android:textSize="@dimen/title_two"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/divider_two"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_nba"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_nba"/>
+
+        <TextView
+            android:id="@+id/tv_title_nfl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nfl"
+            android:textSize="@dimen/title_two"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/rv_home_nba"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_nfl"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_nfl"/>
+
+        <TextView
+            android:id="@+id/tv_title_mbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mbl"
+            android:textSize="@dimen/title_two"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/rv_home_nfl"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_mbl"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/common_min_padding"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_mbl"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

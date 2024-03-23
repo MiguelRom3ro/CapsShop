@@ -7,4 +7,7 @@
     <string name="title_products">Productos</string>
     <string name="title_sales">Rebajas</string>
     <string name="title_help">Ayuda</string>
+    <string name="nba">NBA</string>
+    <string name="nfl">NFL</string>
+    <string name="mbl">MBL</string>
 </resources>
