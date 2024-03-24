@@ -12,16 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_products"
-        android:name="com.miguelrr.capsshop.ui.products.ProductsFragment"
-        android:label="@string/title_products"
-        tools:layout="@layout/fragment_products" />
-
-    <fragment
         android:id="@+id/navigation_sales"
         android:name="com.miguelrr.capsshop.ui.sales.SalesFragment"
         android:label="@string/title_sales"
         tools:layout="@layout/fragment_sales" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.miguelrr.capsshop.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
 
     <fragment
         android:id="@+id/navigation_help"

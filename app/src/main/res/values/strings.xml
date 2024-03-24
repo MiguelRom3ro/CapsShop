@@ -10,4 +10,7 @@
     <string name="nba">NBA</string>
     <string name="nfl">NFL</string>
     <string name="mbl">MBL</string>
+    <string name="others_brand">Otras marcas</string>
+    <string name="title_account">Cuenta</string>
+    <string name="log_out">Cerrar Sesion</string>
 </resources>

@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.miguelrr.capsshop.databinding.FragmentSalesBinding
+import com.miguelrr.capsshop.databinding.FragmentProductsBinding
 
 class SalesFragment : Fragment() {
 
-    private var _binding: FragmentSalesBinding? = null
+    private var _binding: FragmentProductsBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,14 +22,14 @@ class SalesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
+        val dashboardViewModel =
             ViewModelProvider(this).get(SalesViewModel::class.java)
 
-        _binding = FragmentSalesBinding.inflate(inflater, container, false)
+        _binding = FragmentProductsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textDashboard
+        dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
         return root
