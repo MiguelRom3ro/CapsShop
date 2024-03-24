@@ -30,11 +30,6 @@ class HelpFragment : Fragment() {
         _binding = FragmentHelpBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.tvHelp
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-
         return root
     }
 
