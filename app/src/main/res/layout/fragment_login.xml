@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_default_padding"
+        android:text="@string/title_login"
+        android:textSize="@dimen/title_one"
+        android:layout_gravity="center"
+        android:textColor="@color/black" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/btn_external_login"
+        android:drawableLeft="@drawable/ic_google"
+        android:layout_marginTop="@dimen/common_large_padding"
+        android:text="@string/login_with_google" />
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/btn_external_login"
+        android:drawableLeft="@drawable/ic_facebook"
+        android:text="@string/login_with_facebook" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/inputext"
+        android:layout_gravity="center"
+        android:hint="@string/email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/inputpassword"
+        android:layout_gravity="center"
+        android:hint="@string/password"
+        android:layout_marginTop="@dimen/common_default_padding">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_login"
+        style="@style/btn_dark"
+        android:layout_marginTop="@dimen/common_default_padding"
+        android:layout_gravity="center"
+        android:text="@string/title_login" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_min_padding"
+        android:text="@string/forgot_password"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_login_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_min_padding"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/title_signup"
+        android:padding="@dimen/common_min_padding"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

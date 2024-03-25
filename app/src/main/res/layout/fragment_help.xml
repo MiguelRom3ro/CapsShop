@@ -10,8 +10,28 @@
         android:id="@+id/tv_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/title_help"
+        android:textSize="@dimen/title_one"
+        android:layout_marginTop="@dimen/common_default_padding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_know_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_know_my_brand"
+        android:textSize="@dimen/title_three"
+        android:layout_marginTop="@dimen/common_default_padding"
+        app:layout_constraintTop_toBottomOf="@id/tv_help"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:background="@drawable/how_now_my_brand"
+        android:layout_marginTop="@dimen/common_default_padding"
+        app:layout_constraintTop_toBottomOf="@id/tv_know_brand" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

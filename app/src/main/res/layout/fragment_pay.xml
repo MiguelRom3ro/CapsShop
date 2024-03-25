@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="96dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view_section_products"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/common_default_padding">
+
+                <ImageView
+                    android:id="@+id/iv_pay_product"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@android:color/holo_blue_light"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_product"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    style="@style/label_product"
+                    app:layout_constraintStart_toEndOf="@id/iv_pay_product"
+                    android:layout_marginStart="@dimen/common_default_padding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/iv_pay_product"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/common_min_padding"
+                    app:layout_constraintStart_toStartOf="@id/tv_pay_product"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pay_product"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/example_amount"
+                    android:textSize="14sp"
+                    android:layout_marginStart="@dimen/common_min_padding"
+                    app:layout_constraintStart_toEndOf="@id/tv_pay_amount"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_pay_amount"/>
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/total"
+                    android:textSize="16sp"
+                    android:layout_marginTop="@dimen/common_default_padding"
+                    app:layout_constraintTop_toBottomOf="@id/tv_pay_amount"
+                    app:layout_constraintStart_toStartOf="@id/tv_pay_amount"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/example_price"
+                    android:textSize="16sp"
+                    android:layout_marginStart="@dimen/common_min_padding"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/tv_total"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_total"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_default_padding"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/view_section_products">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/adress"
+                    android:textSize="@dimen/title_four"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/inputext"
+                    android:hint="@string/name_ti"
+                    app:helperText="@string/input_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/inputext"
+                    android:layout_width="match_parent"
+                    android:hint="@string/lastname"
+                    app:helperText="@string/input_lastname">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/inputext"
+                    android:hint="@string/codigo_postal"
+                    app:helperText="@string/example_cp">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_cp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="5"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/inputext"
+                    android:hint="@string/colonia"
+                    app:helperText="@string/example_colonia">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_colonia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/inputext"
+                    android:hint="@string/street_number"
+                    app:helperText="@string/example_street">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    style="@style/inputext"
+                    android:hint="@string/number">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ti_pay_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/img_redirigir"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/view_pay_section"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_pay_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="@dimen/common_radius_round"
+        style="@style/btn_dark"
+        android:layout_marginHorizontal="@dimen/common_min_padding"
+        android:text="Pagar"
+        app:layout_constraintStart_toStartOf="@id/view_pay_section"
+        app:layout_constraintTop_toTopOf="@id/view_pay_section"
+        app:layout_constraintBottom_toBottomOf="@id/view_pay_section"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

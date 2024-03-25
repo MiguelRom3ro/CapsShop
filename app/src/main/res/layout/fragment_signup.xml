@@ -1,6 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvRegistrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_default_padding"
+            android:text="@string/title_signup"
+            android:textSize="@dimen/title_one"
+            android:layout_gravity="center"
+            android:textColor="@color/black" />
+
+        <!-- Nombre -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputext"
+            android:hint="@string/name_ti"
+            app:helperText="@string/input_name"
+            android:layout_marginTop="@dimen/common_large_padding">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Apellidos -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputext"
+            android:hint="@string/lastname"
+            app:helperText="@string/input_lastname"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Nombre de usuario -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputext"
+            android:hint="@string/username"
+            app:helperText="@string/input_username">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- Correo electronico -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputext"
+            android:hint="@string/email"
+            app:helperText="@string/input_email"
+            app:layout_constraintStart_toStartOf="@id/ti_signup_name"
+            app:layout_constraintTop_toBottomOf="@id/ti_signup_user">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputpassword"
+            android:hint="@string/password"
+            app:helperText="@string/input_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Confirmar contraseña -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/inputpassword"
+            android:hint="@string/confirm_password"
+            app:helperText="@string/confirm_password_helper"
+            app:layout_constraintStart_toStartOf="@id/ti_signup_name"
+            app:layout_constraintTop_toBottomOf="@id/ti_signup_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ti_signup_cpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_signup"
+            style="@style/btn_dark"
+            android:layout_marginTop="@dimen/common_default_padding"
+            android:text="@string/title_signup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ti_signup_cpassword"
+            />
+
+        <TextView
+            android:id="@+id/tv_signup_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="8dp"
+            android:text="@string/title_login"/>
+
+    </LinearLayout>
+
+</ScrollView>

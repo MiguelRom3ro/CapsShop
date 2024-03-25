@@ -7,4 +7,11 @@
     <dimen name="title_two">22sp</dimen>
     <dimen name="title_one">28sp</dimen>
     <dimen name="title_three">20sp</dimen>
+    <dimen name="common_external_btn">280dp</dimen>
+    <dimen name="common_radius_round">25dp</dimen>
+    <dimen name="common_large_padding">32dp</dimen>
+    <dimen name="common_it_user">350dp</dimen>
+    <dimen name="common_btn_dark">200dp</dimen>
+    <dimen name="title_four">18sp</dimen>
+    <dimen name="text_one">16sp</dimen>
 </resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_default_padding"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_sp_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/example_product"
+                android:textSize="@dimen/title_three" />
+
+
+            <ImageView
+                android:id="@+id/iv_sp_product"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                tools:background="@android:color/holo_blue_light"
+                android:layout_marginTop="@dimen/common_min_padding" />
+
+            <TextView
+                android:id="@+id/tv_sp_price_before"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_min_padding"
+                android:textColor="@color/gray"
+                android:visibility="gone"
+                android:textSize="12sp"
+                android:text="@string/example_price"/>
+
+            <TextView
+                android:id="@+id/tv_price_sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/example_price"
+                android:textSize="@dimen/title_four" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brands"
+                android:layout_marginTop="@dimen/common_min_padding"
+                android:textSize="@dimen/title_three"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/btg_sp_brands"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true">
+                <Button
+                    android:id="@+id/btn_xss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xs_s"
+                    style="?attr/materialButtonOutlinedStyle"/>
+                <Button
+                    android:id="@+id/btn_sm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/s_m"
+                    style="?attr/materialButtonOutlinedStyle"/>
+                <Button
+                    android:id="@+id/btn_ml"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/m_l"
+                    style="?attr/materialButtonOutlinedStyle"/>
+                <Button
+                    android:id="@+id/btn_lxl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/l_xl"
+                    style="?attr/materialButtonOutlinedStyle"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_default_padding">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/gray_light"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                </View>
+
+                <TextView
+                    android:id="@+id/tv_cantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/amount"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/common_default_padding"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_amount_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/one"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/common_min_padding"
+                    app:layout_constraintStart_toEndOf="@id/tv_cantidad"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/iv_substract_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_substract"
+                    android:layout_marginEnd="@dimen/common_min_padding"
+                    android:padding="@dimen/common_min_padding"
+                    android:importantForAccessibility="no"
+                    android:background="@color/gray_light"
+                    app:layout_constraintEnd_toStartOf="@id/iv_plus_sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <ImageButton
+                    android:id="@+id/iv_plus_sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_plus"
+                    android:layout_marginEnd="@dimen/common_default_padding"
+                    android:padding="@dimen/common_min_padding"
+                    android:background="@color/gray_light"
+                    android:importantForAccessibility="no"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_car_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_default_padding"
+                android:backgroundTint="@color/black"
+                android:text="@string/add_shopping_car"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_default_padding"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_four"/>
+
+            <TextView
+                android:id="@+id/tv_description_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_min_padding"
+                android:text="@string/description"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_one"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

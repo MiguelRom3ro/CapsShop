@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="btn_external_login">
+        <item name="android:layout_width">@dimen/common_external_btn</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">@dimen/common_radius_round</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="inputext" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="android:layout_width">@dimen/common_it_user</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/common_default_padding</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+
+    <style name="inputpassword" parent="inputext">
+        <item name="endIconMode">password_toggle</item>
+    </style>
+
+    <style name="btn_dark">
+        <item name="android:layout_width">@dimen/common_btn_dark</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/black</item>
+        <item name="cornerRadius">@dimen/common_radius_round</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="label_product">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/common_default_padding</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">@string/example_product</item>
+        <item name="android:textSize">@dimen/title_four</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+</resources>

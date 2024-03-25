@@ -10,7 +10,7 @@
         android:id="@+id/img_account_user"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        tools:background="@android:color/holo_blue_light"
+        tools:background="@drawable/ic_user"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
