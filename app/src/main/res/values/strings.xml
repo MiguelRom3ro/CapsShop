@@ -57,5 +57,9 @@
     <string name="l_xl">L/XL</string>
     <string name="example_price_before">Antes: $999</string>
     <string name="example_price_after">Ahora: $500</string>
+    <string name="title_pay">Pago</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_selected_product">Producto seleccionado</string>
+    <string name="title_shopping_car">Carrito de compras</string>
 
 </resources>

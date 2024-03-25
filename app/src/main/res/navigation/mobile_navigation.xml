@@ -9,23 +9,95 @@
         android:id="@+id/navigation_home"
         android:name="com.miguelrr.capsshop.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_search"
+            app:destination="@id/navigation_search" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_sales"
         android:name="com.miguelrr.capsshop.ui.sales.SalesFragment"
         android:label="@string/title_sales"
-        tools:layout="@layout/fragment_sales" />
+        tools:layout="@layout/fragment_sales" >
+        <action
+            android:id="@+id/action_navigation_sales_to_navigation_selected_product"
+            app:destination="@id/navigation_selected_product" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_account"
         android:name="com.miguelrr.capsshop.ui.account.AccountFragment"
         android:label="@string/title_account"
-        tools:layout="@layout/fragment_account" />
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_navigation_account_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_help"
         android:name="com.miguelrr.capsshop.ui.help.HelpFragment"
         android:label="@string/title_help"
         tools:layout="@layout/fragment_help"/>
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.miguelrr.capsshop.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.miguelrr.capsshop.ui.signup.SignupFragment"
+        android:label="@string/title_signup"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_navigation_signup_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_pay"
+        android:name="com.miguelrr.capsshop.ui.pay.PayFragment"
+        android:label="@string/title_pay"
+        tools:layout="@layout/fragment_pay"/>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.miguelrr.capsshop.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_navigation_search_to_navigation_selected_product"
+            app:destination="@id/navigation_selected_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_selected_product"
+        android:name="com.miguelrr.capsshop.ui.selectedproduct.SelectedProductFragment"
+        android:label="@string/title_selected_product"
+        tools:layout="@layout/fragment_selected_product">
+        <action
+            android:id="@+id/action_navigation_selected_product_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_shopping_car"
+        android:name="com.miguelrr.capsshop.ui.shoppingcar.ShoppingCarFragment"
+        android:label="@string/title_shopping_car"
+        tools:layout="@layout/fragment_shopping_car">
+        <action
+            android:id="@+id/action_navigation_shopping_car_to_navigation_pay"
+            app:destination="@id/navigation_pay" />
+        <action
+            android:id="@+id/action_navigation_shopping_car_to_navigation_login"
+            app:destination="@id/navigation_login" />
+    </fragment>
+
 </navigation>
