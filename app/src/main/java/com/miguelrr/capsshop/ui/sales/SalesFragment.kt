@@ -21,7 +21,7 @@ class SalesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
+        val salesViewModel =
             ViewModelProvider(this).get(SalesViewModel::class.java)
 
         _binding = FragmentSalesBinding.inflate(inflater, container, false)

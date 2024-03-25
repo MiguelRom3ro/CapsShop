@@ -21,7 +21,7 @@ class HelpFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
+        val helpViewModel =
             ViewModelProvider(this)[HelpViewModel::class.java]
 
         _binding = FragmentHelpBinding.inflate(inflater, container, false)
