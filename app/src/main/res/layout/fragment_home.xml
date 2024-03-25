@@ -22,7 +22,8 @@
             android:id="@+id/rv_carousell"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            app:layout_constraintTop_toBottomOf="@id/search_view"/>
+            app:layout_constraintTop_toBottomOf="@id/search_view"
+            tools:listitem="@layout/view_carousel"/>
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider"
@@ -124,7 +125,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_nba"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_min_padding"
             app:layout_constraintTop_toBottomOf="@id/tv_title_nba"/>
 
@@ -141,7 +142,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_nfl"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_min_padding"
             app:layout_constraintTop_toBottomOf="@id/tv_title_nfl"/>
 
@@ -158,7 +159,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_mbl"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/common_min_padding"
             app:layout_constraintTop_toBottomOf="@id/tv_title_mbl"/>
 

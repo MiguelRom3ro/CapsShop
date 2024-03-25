@@ -41,5 +41,16 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <style name="add_shopping_car" parent ="btn_dark">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/add</item>
+        <item name="android:textSize">@dimen/text</item>
+        <item name="icon">@drawable/ic_shopping_car</item>
+        <item name="cornerRadius">@dimen/radius_min_card</item>
+    </style>
 
+    <string name="add">Agregar</string>
+    <dimen name="text">14sp</dimen>
+    <dimen name="radius_min_card">10dp</dimen>
 </resources>

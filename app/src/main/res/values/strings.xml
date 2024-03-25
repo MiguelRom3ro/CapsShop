@@ -55,5 +55,7 @@
     <string name="s_m">S/M</string>
     <string name="m_l">M/L</string>
     <string name="l_xl">L/XL</string>
+    <string name="example_price_before">Antes: $999</string>
+    <string name="example_price_after">Ahora: $500</string>
 
 </resources>
