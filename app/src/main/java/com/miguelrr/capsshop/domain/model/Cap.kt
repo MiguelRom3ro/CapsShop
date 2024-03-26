@@ -8,4 +8,7 @@ data class Cap(
     val discount : Double,
     val description : String,
     val image : String
-)
+){
+    fun getPriceWithDiscount() = price - discount
+}
+
