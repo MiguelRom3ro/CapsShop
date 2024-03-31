@@ -7,7 +7,6 @@ data class CapModel(
     @SerializedName("name") val name : String,
     @SerializedName("category") val category : String,
     @SerializedName("price") val price : Double,
-    @SerializedName("discount") val discount : Double,
     @SerializedName("description") val description : String,
     @SerializedName("image") val image : String
 )

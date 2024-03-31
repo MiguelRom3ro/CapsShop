@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface CapAPIClient {
 
-    @GET
+    @GET("/getAllCaps.php")
     suspend fun getAllCaps() : Response<List<CapModel>>
 }

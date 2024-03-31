@@ -17,7 +17,7 @@ object NetworkModule {
     @Provides
     fun provideRetrofit() : Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://arduinotomobile.000webhostapp.com/php/CapsShop/getAllData.php/")
+            .baseUrl("https://arduinotomobile.000webhostapp.com/php/CapsShop/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
