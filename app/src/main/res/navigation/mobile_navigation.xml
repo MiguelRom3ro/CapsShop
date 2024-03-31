@@ -11,19 +11,10 @@
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_navigation_home_to_navigation_search"
-            app:destination="@id/navigation_search" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_sales"
-        android:name="com.miguelrr.capsshop.ui.sales.SalesFragment"
-        android:label="@string/title_sales"
-        tools:layout="@layout/fragment_sales" >
-        <action
-            android:id="@+id/action_navigation_sales_to_navigation_selected_product"
+            android:id="@+id/action_navigation_home_to_navigation_selected_product"
             app:destination="@id/navigation_selected_product" />
     </fragment>
+
 
     <fragment
         android:id="@+id/navigation_account"

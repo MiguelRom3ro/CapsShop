@@ -52,6 +52,6 @@
         app:cornerRadius="20dp"
         android:text="@string/log_out"
         android:backgroundTint="@android:color/holo_red_light"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

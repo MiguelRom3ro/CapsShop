@@ -1,5 +1,6 @@
 package com.miguelrr.capsshop.di
 
+import com.miguelrr.capsshop.data.network.CapAPIClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,10 +22,9 @@ object NetworkModule {
             .build()
     }
 
-    /*
     @Singleton
     @Provides
-    fun provideQuoteApiClient(retrofit: Retrofit) : QuoteAPIClient{
-        return retrofit.create(QuoteAPIClient::class.java)
-    }*/
+    fun provideCapApiClient(retrofit: Retrofit) : CapAPIClient{
+        return retrofit.create(CapAPIClient::class.java)
+    }
 }
