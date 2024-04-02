@@ -1,13 +1,51 @@
 package com.miguelrr.capsshop.ui.home
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.miguelrr.capsshop.domain.GetAllCapsUseCase
+import com.miguelrr.capsshop.domain.GetAllImagesUseCase
+import com.miguelrr.capsshop.domain.GetMBLCapUseCase
+import com.miguelrr.capsshop.domain.GetNBACapUseCase
+import com.miguelrr.capsshop.domain.GetNFLCapUseCase
+import com.miguelrr.capsshop.domain.model.Cap
+import com.miguelrr.capsshop.domain.model.Image
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val getAllCaps : GetAllCapsUseCase,
+    private val getNBACaps : GetNBACapUseCase,
+    private val getNFLCaps : GetNFLCapUseCase,
+    private val getMBLCaps : GetMBLCapUseCase,
+    private val getImages : GetAllImagesUseCase
+): ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private var _images = MutableLiveData<List<Image>>()
+    val images : LiveData<List<Image>> get() = _images
+    private var _nbaCaps = MutableLiveData<List<Cap>>()
+    val nbaCaps : LiveData<List<Cap>> get() = _nbaCaps
+    private var _nflCaps = MutableLiveData<List<Cap>>()
+    val nflCaps : LiveData<List<Cap>> get() = _nflCaps
+    private var _mblCaps = MutableLiveData<List<Cap>>()
+    val mblCaps : LiveData<List<Cap>> get() = _mblCaps
+
+    fun onCreate(){
+        Log.d("Pruebas", "OnCreate..............................")
+        viewModelScope.launch {
+            Log.d("Pruebas", "BeforeGetAllCaps..............................")
+            getAllCaps()
+            Log.d("Pruebas", "GetAllCaps..............................")
+
+            _images.postValue(getImages())
+            _nbaCaps.postValue(getNBACaps())
+            _nflCaps.postValue(getNFLCaps())
+            _mblCaps.postValue(getMBLCaps())
+        }
     }
-    val text: LiveData<String> = _text
+
 }

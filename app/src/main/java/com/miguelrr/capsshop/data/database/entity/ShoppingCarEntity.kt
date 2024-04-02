@@ -8,6 +8,6 @@ import androidx.room.PrimaryKey
 data class ShoppingCarEntity (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") val id : Int = 0,
-    @ColumnInfo(name = "cap") val cap : CapEntity,
+    @ColumnInfo(name = "id_cap") val idCap : Int,
     @ColumnInfo(name = "amount") val amount : Int
 )

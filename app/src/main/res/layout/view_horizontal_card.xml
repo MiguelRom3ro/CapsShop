@@ -5,6 +5,7 @@
     android:layout_height="300dp"
     android:clickable="true"
     android:focusable="true"
+    android:layout_marginEnd="@dimen/common_default_padding"
     app:strokeWidth="1dp"
     app:strokeColor="@color/gray"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -28,6 +29,7 @@
             android:id="@+id/tv_name_product"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_min_padding"
             android:textSize="16sp"
             android:text="@string/example_product"
             android:textColor="@color/black"
@@ -41,13 +43,6 @@
             android:textColor="@color/black"
             tools:text="@string/example_price"
             android:textSize="14sp"/>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_shopping_car_h"
-            style="@style/add_shopping_car"
-            android:layout_marginTop="8dp"
-            android:layout_gravity="center"
-            android:gravity="center"/>
 
     </LinearLayout>
 

@@ -4,8 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.miguelrr.capsshop.R
+import com.miguelrr.capsshop.domain.model.Image
 
-class CarouselAdapter(private val images: List<String>) : RecyclerView.Adapter<CarouselViewHolder>() {
+class CarouselAdapter(private val images: List<Image>) : RecyclerView.Adapter<CarouselViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CarouselViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)

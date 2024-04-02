@@ -21,11 +21,11 @@ class AccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val accountViewModel =
-            ViewModelProvider(this).get(AccountViewModel::class.java)
 
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+
 
         return root
     }

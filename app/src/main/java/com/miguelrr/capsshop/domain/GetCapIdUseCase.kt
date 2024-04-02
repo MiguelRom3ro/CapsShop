@@ -1,4 +1,10 @@
 package com.miguelrr.capsshop.domain
 
-class GetCapIdUseCase {
+import com.miguelrr.capsshop.data.CapRepository
+import com.miguelrr.capsshop.data.database.entity.toDatabase
+import com.miguelrr.capsshop.domain.model.Cap
+import javax.inject.Inject
+
+class GetCapIdUseCase{
+
 }

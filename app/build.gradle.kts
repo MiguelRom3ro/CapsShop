@@ -42,6 +42,8 @@ android {
 
 dependencies {
 
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
     //Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -56,7 +58,9 @@ dependencies {
     //Room
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
-    annotationProcessor("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+    //annotationProcessor("android.arch.persistence.room:compiler:$roomVersion")
 
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.core:core-ktx:1.12.0")

@@ -23,5 +23,9 @@ object RoomModule {
 
     @Singleton
     @Provides
-    fun provideQuoteDao(db : CapDatabase) = db.getCapDao()
+    fun provideCapDao(db : CapDatabase) = db.getCapDao()
+
+    @Singleton
+    @Provides
+    fun provideSCDao(db : CapDatabase) = db.getShoppingCarDao()
 }
