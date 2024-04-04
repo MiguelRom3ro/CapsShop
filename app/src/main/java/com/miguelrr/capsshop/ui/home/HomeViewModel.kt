@@ -5,11 +5,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.miguelrr.capsshop.domain.GetAllCapsUseCase
-import com.miguelrr.capsshop.domain.GetAllImagesUseCase
-import com.miguelrr.capsshop.domain.GetMBLCapUseCase
-import com.miguelrr.capsshop.domain.GetNBACapUseCase
-import com.miguelrr.capsshop.domain.GetNFLCapUseCase
+import com.miguelrr.capsshop.domain.usecases.GetAllCapsUseCase
+import com.miguelrr.capsshop.domain.usecases.GetAllImagesUseCase
+import com.miguelrr.capsshop.domain.usecases.GetMBLCapUseCase
+import com.miguelrr.capsshop.domain.usecases.GetNBACapUseCase
+import com.miguelrr.capsshop.domain.usecases.GetNFLCapUseCase
 import com.miguelrr.capsshop.domain.model.Cap
 import com.miguelrr.capsshop.domain.model.Image
 import dagger.hilt.android.lifecycle.HiltViewModel

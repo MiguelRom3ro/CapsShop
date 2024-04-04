@@ -31,16 +31,6 @@
                 android:layout_marginTop="@dimen/common_min_padding" />
 
             <TextView
-                android:id="@+id/tv_sp_price_before"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/common_min_padding"
-                android:textColor="@color/gray"
-                android:visibility="gone"
-                android:textSize="12sp"
-                android:text="@string/example_price"/>
-
-            <TextView
                 android:id="@+id/tv_price_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

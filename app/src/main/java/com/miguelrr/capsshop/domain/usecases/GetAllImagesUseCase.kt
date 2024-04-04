@@ -1,4 +1,4 @@
-package com.miguelrr.capsshop.domain
+package com.miguelrr.capsshop.domain.usecases
 
 import com.miguelrr.capsshop.data.ImageRepository
 import com.miguelrr.capsshop.domain.model.Image

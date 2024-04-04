@@ -7,14 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.miguelrr.capsshop.databinding.FragmentHomeBinding
+import com.miguelrr.capsshop.domain.listeners.OnClickHorizontal
 import com.miguelrr.capsshop.ui.adapter.carousel.CarouselAdapter
 import com.miguelrr.capsshop.ui.adapter.horizontal.HorizontalAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), OnClickHorizontal {
 
     private var _binding: FragmentHomeBinding? = null
 
@@ -42,17 +44,17 @@ class HomeFragment : Fragment() {
 
         homeViewModel.nbaCaps.observe(viewLifecycleOwner){
             binding.rvHomeNba.layoutManager = LinearLayoutManager(binding.rvHomeNba.context, LinearLayoutManager.HORIZONTAL, false)
-            binding.rvHomeNba.adapter = HorizontalAdapter(it)
+            binding.rvHomeNba.adapter = HorizontalAdapter(it, this)
         }
 
         homeViewModel.nflCaps.observe(viewLifecycleOwner){
             binding.rvHomeNfl.layoutManager = LinearLayoutManager(binding.rvHomeNfl.context, LinearLayoutManager.HORIZONTAL, false)
-            binding.rvHomeNfl.adapter = HorizontalAdapter(it)
+            binding.rvHomeNfl.adapter = HorizontalAdapter(it, this)
         }
 
         homeViewModel.mblCaps.observe(viewLifecycleOwner){
             binding.rvHomeMbl.layoutManager = LinearLayoutManager(binding.rvHomeMbl.context, LinearLayoutManager.HORIZONTAL, false)
-            binding.rvHomeMbl.adapter = HorizontalAdapter(it)
+            binding.rvHomeMbl.adapter = HorizontalAdapter(it, this)
         }
 
         return root
@@ -61,5 +63,9 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onClickHorizontal(idCap: Int) {
+        findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToNavigationSelectedProduct(idCap = idCap))
     }
 }
