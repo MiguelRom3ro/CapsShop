@@ -4,9 +4,11 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.miguelrr.capsshop.databinding.ViewHorizontalCardBinding
+import com.miguelrr.capsshop.domain.listeners.OnClickHorizontal
 import com.miguelrr.capsshop.domain.model.Cap
 
-class HorizontalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class HorizontalViewHolder(view: View,
+private val listen : OnClickHorizontal) : RecyclerView.ViewHolder(view) {
 
     val binding = ViewHorizontalCardBinding.bind(view)
 
@@ -17,5 +19,9 @@ class HorizontalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             .load(cap.image)
             .centerCrop()
             .into(binding.ivCardHorizontal)
+
+        binding.ivCardHorizontal.setOnClickListener{
+            listen.onClickHorizontal(cap.id)
+        }
     }
 }
