@@ -1,8 +1,8 @@
 package com.miguelrr.capsshop.di
 
-import android.util.Log
 import com.miguelrr.capsshop.data.network.CapAPIClient
 import com.miguelrr.capsshop.data.network.ImageAPIClient
+import com.miguelrr.capsshop.data.network.UserAPIClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,6 +15,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
+    @Singleton
     @Provides
     fun provideRetrofit() : Retrofit{
         return Retrofit.Builder()
@@ -23,15 +24,21 @@ object NetworkModule {
             .build()
     }
 
+    @Singleton
     @Provides
     fun provideCapApiClient(retrofit: Retrofit) : CapAPIClient{
-        Log.d("Pruebas", "Retrofit1........................")
         return retrofit.create(CapAPIClient::class.java)
     }
 
+    @Singleton
     @Provides
     fun provideImageApiClient(retrofit: Retrofit) : ImageAPIClient{
-        Log.d("Pruebas", "Retrofit2........................")
         return retrofit.create(ImageAPIClient::class.java)
+    }
+
+    @Singleton
+    @Provides
+    fun provideUserApiClient(retrofit: Retrofit) : UserAPIClient{
+        return retrofit.create(UserAPIClient::class.java)
     }
 }
