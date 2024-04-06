@@ -7,7 +7,7 @@
     tools:context=".ui.account.AccountFragment">
 
     <ImageView
-        android:id="@+id/img_account_user"
+        android:id="@+id/iv_account_user"
         android:layout_width="150dp"
         android:layout_height="150dp"
         tools:background="@drawable/ic_user"
@@ -21,8 +21,8 @@
         android:layout_marginStart="@dimen/common_default_padding"
         tools:text="Nombre de usuario"
         android:textSize="@dimen/title_three"
-        app:layout_constraintTop_toTopOf="@id/img_account_user"
-        app:layout_constraintStart_toEndOf="@id/img_account_user"
+        app:layout_constraintTop_toTopOf="@id/iv_account_user"
+        app:layout_constraintStart_toEndOf="@id/iv_account_user"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
@@ -47,6 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_account_name"/>
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_account_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cornerRadius="20dp"
