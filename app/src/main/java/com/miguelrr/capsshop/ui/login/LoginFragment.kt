@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.databinding.FragmentLoginBinding
@@ -31,16 +30,15 @@ class LoginFragment : Fragment() {
     ): View {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnLogin.setOnClickListener{
-            if(!binding.tiLoginEmail.text.isNullOrEmpty() && !binding.tiLoginPassword.text.isNullOrEmpty()){
+            if(binding.tiLoginEmail.text.toString().isNotEmpty() && binding.tiLoginPassword.text.toString().isNotEmpty()){
                 val emailUsername = binding.tiLoginEmail.text.toString()
                 val password = binding.tiLoginPassword.text.toString()
                 val loginUser = LoginUser(emailUsername, password)
