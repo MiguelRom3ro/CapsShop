@@ -28,9 +28,9 @@
     <string name="username">Nombre de usuario</string>
     <string name="input_username">Ingrese un nombre de usuario</string>
     <string name="input_email">Ingrese su correo electronico</string>
-    <string name="input_password">Ingrese una contraseña</string>
+    <string name="input_password">Debe contener por lo menos 8 caracteres</string>
     <string name="confirm_password">Confirmar contraseña</string>
-    <string name="confirm_password_helper">Vuelva a ingresar la contrast</string>
+    <string name="confirm_password_helper">Vuelva a ingresar la contraseña</string>
     <string name="total_pay">Total a pagar:</string>
     <string name="example_price">$500</string>
     <string name="finish_buy">Finalizar compra</string>
