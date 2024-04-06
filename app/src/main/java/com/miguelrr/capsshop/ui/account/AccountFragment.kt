@@ -10,7 +10,9 @@ import androidx.navigation.fragment.findNavController
 import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.databinding.FragmentAccountBinding
 import com.miguelrr.capsshop.domain.model.User
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AccountFragment : Fragment() {
 
     private var _binding: FragmentAccountBinding? = null
