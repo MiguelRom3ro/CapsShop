@@ -8,9 +8,11 @@ import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.domain.IdUserSharedPreferences
 import com.miguelrr.capsshop.domain.model.User
 import com.miguelrr.capsshop.domain.usecases.GetUserByIdUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class AccountViewModel @Inject constructor(
     private val getUserById : GetUserByIdUseCase
 ): ViewModel()  {

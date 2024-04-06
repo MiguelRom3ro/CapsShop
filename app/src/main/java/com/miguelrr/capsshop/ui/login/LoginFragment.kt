@@ -12,8 +12,9 @@ import androidx.navigation.fragment.findNavController
 import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.databinding.FragmentLoginBinding
 import com.miguelrr.capsshop.domain.model.LoginUser
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
 
