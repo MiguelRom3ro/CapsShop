@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.miguelrr.capsshop.databinding.FragmentSignupBinding
 import com.miguelrr.capsshop.domain.model.SignUpUser
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SignupFragment : Fragment() {
     private var _binding: FragmentSignupBinding? = null
 
@@ -28,9 +29,8 @@ class SignupFragment : Fragment() {
     ): View {
 
         _binding = FragmentSignupBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,12 +60,13 @@ class SignupFragment : Fragment() {
 
     private fun validateSignUp() {
         //Verificar que no esten vacios los textinput
-        if(!binding.tiSignupName.text.toString().isNullOrEmpty() &&
-            !binding.tiSignupLastname.text.toString().isNullOrEmpty() &&
-            !binding.tiSignupEmail.text.toString().isNullOrEmpty() &&
-            !binding.tiSignupPassword.text.toString().isNullOrEmpty() &&
-            !binding.tiSignupCpassword.text.toString().isNullOrEmpty() &&
-            !binding.tiSignupUser.text.toString().isNullOrEmpty()){
+        if(binding.tiSignupName.text.toString().isNotEmpty() &&
+            binding.tiSignupLastname.text.toString().isNotEmpty() &&
+            binding.tiSignupEmail.text.toString().isNotEmpty() &&
+            binding.tiSignupPassword.text.toString().isNotEmpty() &&
+            binding.tiSignupCpassword.text.toString().isNotEmpty() &&
+            binding.tiSignupUser.text.toString().isNotEmpty()
+        ){
             //Verificar que la contraseña tenga una longitud mayor o igual a 8
             if(binding.tiSignupPassword.text.toString().length >= 8){
                 //Verificar que las contraseñas sean iguales
