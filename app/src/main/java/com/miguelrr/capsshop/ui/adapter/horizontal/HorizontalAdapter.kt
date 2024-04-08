@@ -9,7 +9,7 @@ import com.miguelrr.capsshop.domain.model.Cap
 import com.miguelrr.capsshop.ui.adapter.carousel.CarouselViewHolder
 
 class HorizontalAdapter(
-    private val nbaCaps: List<Cap>,
+    private val caps: List<Cap>,
     private val listen : OnClickHorizontal) : RecyclerView.Adapter<HorizontalViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HorizontalViewHolder {
@@ -18,11 +18,11 @@ class HorizontalAdapter(
     }
 
     override fun onBindViewHolder(holder: HorizontalViewHolder, position: Int) {
-        val item = nbaCaps[position]
+        val item = caps[position]
 
         holder.render(item)
     }
 
-    override fun getItemCount(): Int = nbaCaps.size
+    override fun getItemCount(): Int = caps.size
 
 }

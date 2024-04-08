@@ -8,6 +8,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.miguelrr.capsshop.R
 import com.miguelrr.capsshop.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,5 +39,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val fab : FloatingActionButton = findViewById(R.id.fab_sc)
+        fab.setOnClickListener{
+
+        }
     }
 }

@@ -5,5 +5,11 @@ import com.miguelrr.capsshop.data.database.entity.toDatabase
 import com.miguelrr.capsshop.domain.model.Cap
 import javax.inject.Inject
 
-class GetSearchCapUseCase {
+class GetSearchCapUseCase @Inject constructor(
+    private val capApi : CapRepository
+) {
+
+    suspend operator fun invoke(query : String) : List<Cap>{
+        return capApi.getSearchCaps(query)
+    }
 }
