@@ -18,8 +18,8 @@ interface CapDao {
     @Query("SELECT * FROM cap_table WHERE category = 'MBL'")
     suspend fun getMBLCaps() : List<CapEntity>
 
-    @Query("SELECT * FROM cap_table WHERE name LIKE :search")
-    suspend fun getSearchCaps(search: String) : List<CapEntity>
+    @Query("SELECT * FROM cap_table WHERE name LIKE '%' || :query || '%'")
+    suspend fun getSearchCaps(query: String) : List<CapEntity>
 
     @Query("SELECT * FROM cap_table WHERE id LIKE :id")
     suspend fun getCapById(id : Int) : CapEntity

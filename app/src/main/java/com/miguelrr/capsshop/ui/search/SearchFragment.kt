@@ -46,13 +46,12 @@ class SearchFragment : Fragment(), OnClickSearch {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                //searchViewModel.search(newText ?: "")
+                searchViewModel.search(newText ?: "")
                 return true
             }
         })
 
         searchViewModel.searchCaps.observe(viewLifecycleOwner){
-            Toast.makeText(context, "${it.size}", Toast.LENGTH_SHORT).show()
             binding.rvSearch.layoutManager = LinearLayoutManager(binding.rvSearch.context, LinearLayoutManager.VERTICAL, false)
             binding.rvSearch.adapter = SearchAdapter(it, this)
         }
