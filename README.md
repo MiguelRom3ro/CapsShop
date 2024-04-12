@@ -6,3 +6,4 @@ The application has been developed in Kotlin using the following technologies:
 - MVVM Architecture
 - ROOM Database 
 - SQLite
+- Github Actions
