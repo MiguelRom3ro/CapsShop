@@ -1,4 +1,4 @@
-package com.miguelrr.capsshop.domain
+package com.miguelrr.capsshop.data.sharedpreferences
 
 import android.content.Context
 

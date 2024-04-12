@@ -1,7 +1,7 @@
 package com.miguelrr.capsshop
 
 import android.app.Application
-import com.miguelrr.capsshop.domain.IdUserSharedPreferences
+import com.miguelrr.capsshop.data.sharedpreferences.IdUserSharedPreferences
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

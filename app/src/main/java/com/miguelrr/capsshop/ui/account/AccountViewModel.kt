@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
-import com.miguelrr.capsshop.domain.IdUserSharedPreferences
 import com.miguelrr.capsshop.domain.model.User
 import com.miguelrr.capsshop.domain.usecases.GetUserByIdUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
