@@ -34,7 +34,6 @@ class HomeFragment : Fragment(), OnClickHorizontal {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        Log.d("Pruebas", "OnCreateView..............................")
         homeViewModel.onCreate()
 
         homeViewModel.images.observe(viewLifecycleOwner){

@@ -36,7 +36,7 @@ class NetworkService @Inject constructor(
                 signUpUserModel.lastname,
                 signUpUserModel.email,
                 signUpUserModel.password,
-                signUpUserModel.lastname
+                signUpUserModel.username
             )
             response.body()?: ResponseSignUpModel("error", "not data found")
         }

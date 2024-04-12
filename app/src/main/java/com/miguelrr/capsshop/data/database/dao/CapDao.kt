@@ -30,4 +30,7 @@ interface CapDao {
     @Query("DELETE FROM cap_table")
     suspend fun deleteAllCaps()
 
+    @Query("SELECT price FROM cap_table WHERE id LIKE :id")
+    suspend fun getPriceCap(id: Int) : Double
+
 }

@@ -2,13 +2,15 @@ package com.miguelrr.capsshop.domain.usecases
 
 import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.data.ShoppingCarRepository
+import com.miguelrr.capsshop.domain.model.ShoppingCar
 import javax.inject.Inject
 
-class RemoveItemSCUseCase @Inject constructor(
+class GetAllItemsSCUseCase @Inject constructor(
     private val shoppingCarRepository: ShoppingCarRepository
 ) {
-    suspend operator fun invoke(id : Int){
+
+    suspend operator fun invoke() : List<ShoppingCar>{
         val idUser = idUserSP.getId()
-        shoppingCarRepository.deleteItem(id, idUser)
+        return shoppingCarRepository.getAllItems(idUser)
     }
 }

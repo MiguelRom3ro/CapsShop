@@ -50,6 +50,7 @@ class LoginFragment : Fragment() {
             if(it.idUser != -1){
                 Toast.makeText(context, "Bienvenido ${it.username}", Toast.LENGTH_SHORT).show()
                 idUserSP.saveId(it.idUser)
+                navigateHome()
             }else{
                 Toast.makeText(context, it.reason, Toast.LENGTH_SHORT).show()
             }
@@ -62,6 +63,10 @@ class LoginFragment : Fragment() {
 
     private fun navigateSignUp() {
         findNavController().navigate(LoginFragmentDirections.actionNavigationLoginToNavigationSignup())
+    }
+
+    private fun navigateHome() {
+        findNavController().navigate(LoginFragmentDirections.actionNavigationLoginToNavigationHome())
     }
 
     override fun onDestroyView() {

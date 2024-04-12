@@ -3,6 +3,7 @@ package com.miguelrr.capsshop.di
 import android.content.Context
 import androidx.room.Room
 import com.miguelrr.capsshop.data.database.CapDatabase
+import com.miguelrr.capsshop.data.database.CapDatabase.Companion.MIGRATION_1_2
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,7 +20,9 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideRoom(@ApplicationContext context: Context) =
-        Room.databaseBuilder(context, CapDatabase::class.java, CAP_DATABASE_NAME).build()
+        Room.databaseBuilder(context, CapDatabase::class.java, CAP_DATABASE_NAME)
+            .addMigrations(MIGRATION_1_2)
+            .build()
 
     @Singleton
     @Provides

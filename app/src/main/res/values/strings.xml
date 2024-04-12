@@ -61,5 +61,7 @@
     <string name="title_search">Buscar</string>
     <string name="title_selected_product">Producto seleccionado</string>
     <string name="title_shopping_car">Carrito de compras</string>
+    <string name="email_username">Correo electronico o nombre de usuario</string>
+    <string name="delete">Eliminar</string>
 
 </resources>

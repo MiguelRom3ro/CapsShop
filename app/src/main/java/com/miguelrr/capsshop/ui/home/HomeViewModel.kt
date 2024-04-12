@@ -35,11 +35,8 @@ class HomeViewModel @Inject constructor(
     val mblCaps : LiveData<List<Cap>> get() = _mblCaps
 
     fun onCreate(){
-        Log.d("Pruebas", "OnCreate..............................")
         viewModelScope.launch {
-            Log.d("Pruebas", "BeforeGetAllCaps..............................")
             getAllCaps()
-            Log.d("Pruebas", "GetAllCaps..............................")
 
             _images.postValue(getImages())
             _nbaCaps.postValue(getNBACaps())

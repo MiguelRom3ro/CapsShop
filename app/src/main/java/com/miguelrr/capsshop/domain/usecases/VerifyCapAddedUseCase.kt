@@ -4,11 +4,12 @@ import com.miguelrr.capsshop.CapsShopApp.Companion.idUserSP
 import com.miguelrr.capsshop.data.ShoppingCarRepository
 import javax.inject.Inject
 
-class RemoveItemSCUseCase @Inject constructor(
+class VerifyCapAddedUseCase @Inject constructor(
     private val shoppingCarRepository: ShoppingCarRepository
 ) {
-    suspend operator fun invoke(id : Int){
+
+    suspend operator fun invoke(idCap : Int) : Boolean{
         val idUser = idUserSP.getId()
-        shoppingCarRepository.deleteItem(id, idUser)
+        return shoppingCarRepository.verifyCapAdded(idCap, idUser)
     }
 }

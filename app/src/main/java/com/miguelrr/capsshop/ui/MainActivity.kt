@@ -2,6 +2,7 @@ package com.miguelrr.capsshop.ui
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -42,7 +43,24 @@ class MainActivity : AppCompatActivity() {
 
         val fab : FloatingActionButton = findViewById(R.id.fab_sc)
         fab.setOnClickListener{
-
+            navController.navigate(R.id.navigation_shopping_car)
         }
+
+        navController.addOnDestinationChangedListener{_, destination, _ ->
+            if(destination.id == R.id.navigation_login ||
+                destination.id == R.id.navigation_pay ||
+                destination.id == R.id.navigation_selected_product ||
+                destination.id == R.id.navigation_shopping_car ||
+                destination.id == R.id.navigation_signup){
+
+                fab.visibility = View.GONE
+                navView.visibility = View.GONE
+            }else{
+                fab.visibility = View.VISIBLE
+                navView.visibility = View.VISIBLE
+            }
+        }
+
+
     }
 }

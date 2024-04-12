@@ -41,7 +41,7 @@ class SignupFragment : Fragment() {
         }
 
         signupViewModel.responseSignUp.observe(viewLifecycleOwner){
-            if(it.status == "succes"){
+            if(it.status == "success"){
                 Toast.makeText(context, it.reason, Toast.LENGTH_SHORT).show()
                 navigateLogin()
             }else{
